@@ -55,7 +55,7 @@ EXPOSE 3000
 
 # Add healthcheck using the ping endpoint
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://localhost:3000/currency-convert-api/ping || exit 1
+    CMD wget --no-verbose --tries=1 --spider http://localhost:3000/currency-convert/ping || exit 1
 
 # Start the application
 CMD ["yarn", "start"]
